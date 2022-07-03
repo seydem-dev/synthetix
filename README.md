@@ -7,7 +7,7 @@
 ```
 Deposit
 ```
-*Deposit event acts like a deposit state variable. But why is it an event then? Because events require less gas than storage variables. Events don't actually get stored in storage like storage variables or else they wouldn't be cheaper. They aren't accessible to the smart contract, but they're basically mapped to the cotract address and they're stored in LOGS. Now, if you already know what your storage variable is going to do, I highly advise you to check if you have the option to use an event in yor smart contract. Since events are stored in LOGS, they can really only the one thing you tell them. That's why you ```emit``` them.*
+*Deposit event acts like a deposit state variable. But why is it an event then? Because events require less gas than storage variables. Events don't actually get stored in storage like storage variables or else they wouldn't be cheaper. They aren't accessible to the smart contract, but they're basically mapped to the cotract address and they're stored in LOGS. Now, if you already know what your storage variable is going to do, I highly advise you to check if you have the option to use an event in yor smart contract. Since events are stored in LOGS, they can really only the one thing you tell them. That's why you `emit` them.*
 
 ```
 Withdraw
@@ -27,4 +27,4 @@ withdraw()
 ```
 fallback()
 ```
-*Fallback is called when users directly send ETH to the smart contract. Since fallback includes ```deposit()```, users have the option to indirectly deposit their ETH, by sending ETH to the smart contract directly.*
+*Fallback is called when users directly send ETH to the smart contract. Since fallback includes `deposit()`, users have the option to indirectly deposit their ETH, by sending ETH to the smart contract directly.*
