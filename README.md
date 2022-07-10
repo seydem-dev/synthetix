@@ -12,7 +12,7 @@ Deposit
 ```
 Withdraw
 ```
-*Same as deposit, except you're doing the oppsoite, which is withdrawing.*
+*The opposite of Deposit.*
 
 ```
 deposit()
