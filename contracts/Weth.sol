@@ -23,4 +23,8 @@ contract WETH is ERC20("Wrapped Ether", "WETH") {
     fallback() external payable {
         deposit();
     }
+
+    receive() external payable {
+        deposit();
+    }
 }
