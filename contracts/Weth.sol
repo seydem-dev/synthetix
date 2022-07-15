@@ -20,10 +20,6 @@ contract WETH is ERC20("Wrapped Ether", "WETH") {
         emit Withdraw(msg.sender, amount);
     }
 
-    fallback() external payable {
-        deposit();
-    }
-
     receive() external payable {
         deposit();
     }
