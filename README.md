@@ -2,7 +2,7 @@
 
 **Wrapped Ether is, like the name says, Ether, but wrapped.** 
 
-**Well, it's not literally wrapped in something, but you can imagine that if certain transactions want to be made with ETH, you have to wrap it. Why? Because ETH is not an ERC20 and since ERC20 is the industry standard, you wrap ETH into an ERC20. ETH now acts as an ERC20 and you can successfully do what you initially wanted to. Unless there's a problem with the application you're interacting with 😵**
+**Well, it's not literally wrapped in something, but you can imagine that if certain transactions want to be made with ETH, you have to wrap it. Why? Because ETH is not an ERC20 and since ERC20 is the industry standard and pretty much supported by every protocol, you wrap ETH into an ERC20, hence the "Wrapped" before Ether. ETH now acts as an ERC20 and you can successfully do whatever you wanted to, unless there's a problem with the application you're interacting with 😵**
 
 ```
 Deposit
@@ -12,12 +12,12 @@ Deposit
 ```
 Withdraw
 ```
-*The opposite of `Deposit`.*
+*Withdraw your deposited ETH, but burn all withdrawed WETH in return.*
 
 ```
 deposit()
 ```
-*Function that allows users to deposit their (now unavailable) ETH and mint WETH in return.*
+*Function that allows users to deposit their ETH and mint WETH in return.*
 
 ```
 withdraw()
@@ -27,4 +27,4 @@ withdraw()
 ```
 receive()
 ```
-*Receive is called when users directly send ETH to the smart contract. Since receive includes `deposit()`, it enables users to deposit their ETH and get WETH in return by sending ETH to the smart contract directly.*
+*Receive is called when users directly send ETH to the smart contract. Since receive implements `deposit()`, it enables users to deposit their ETH and receive WETH in return by sending ETH to the smart contract directly.*
